@@ -1,7 +1,19 @@
-import React from 'react';
+//Alexander Shelton
 
-//import ListItems from './list-items';
-//
+
+
+
+
+
+import React from 'react';
+import ListItems from './listItems';
+import { library } from '@fortawesome/fontawesome-svg-core'
+import { faTrash } from '@fortawesome/free-solid-svg-icons'
+
+import './todo-list.css';
+
+library.add(faTrash)
+
 
 
 class TodoList extends React.Component {
@@ -10,6 +22,8 @@ class TodoList extends React.Component {
   
     this.addToDo = this.addToDo.bind(this);
     this.onToDoChange = this.onToDoChange.bind(this);
+    this.setUpdate = this.setUpdate.bind(this);
+    this.deleteItem = this.deleteItem.bind(this);
 
 
      
@@ -30,7 +44,7 @@ class TodoList extends React.Component {
     e.preventDefault();
     const entry = this.state.currentItem;
     if (entry !== '') {
-      const items = [...this.state.items, items];
+      const items = [...this.state.items, entry];
       this.setState({
         items: items,
         currentItem: {
@@ -52,18 +66,40 @@ class TodoList extends React.Component {
     });
   }
 
+  deleteItem(key) {
+    //return array without key and update state
+    const filtered = this.state.items.filter(item => item.key !== key);
+    this.setState({items: filtered});
+  }
+  
+  
+  //Find the todo with the key. change its value. update items in todo
+  setUpdate(new_todo, key){
+    const items = this.state.items;
+    items.map(item => {
+      if(item.key === key) {
+        item.ToDo = new_todo;
+      }
+    });
+    this.setState({items: items});
+  }
+
 
 
   render(){
     return(
-      <div className="App">
+      <div className="ToDoList">
         <header>
           <form id="to-do-form" onSubmit={this.addToDo}>
             <input type="text" placeholder="enter to do item" value={this.state.currentItem.ToDo} onChange={this.onToDoChange}/>
               <button type='submit'>Add</button>
           </form>
-        <p> will show lists here </p>
-        </header>
+            <p> {this.state.items.ToDo} </p>
+            
+            <ListItems items={this.state.items} deleteItem={this.deleteItem} setUpdate={this.setUpdate} />
+
+
+      </header>
       </div>
     );
   }

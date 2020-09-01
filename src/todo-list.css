@@ -1,0 +1,30 @@
+body {
+  background-color: #A02DB8;
+}
+
+
+.ToDoList{
+  min-height: 500px;
+  width: 400px;
+  background-color: #F0DBD8;
+  margin: 40px auto;
+}
+
+
+#to-do-form input {
+  boarder: 0;
+  width: 200px;
+  height: 50;
+  padding: 0 20px;
+  margin: 20px;
+  border-radius: 10px; 'rounded'
+  color: #000;
+}
+      
+#todo-form button{
+  height: 50px;
+  width: 80px;
+  border-radius: 5px;
+  border: 0;
+  background-color: brown;
+}
