@@ -1,17 +1,35 @@
 
 
 .ListItems{
-    color: #fff;
-    width: 300px;
-    margin: 20px auto;
-    height: 50px;
-    background-color: #0dbf07;
-    border-radius: 5px;
+  color: #fff;
+  width: 300px;
+  margin: 20px auto;
+  height: 50px;
+  background-color: #14b9c9;
+  border-radius: 5px;
 }
-.ListItemst p{
-    width: 100%;
-    margin: 10px;
-    padding: 10px;
-    position: relative;
-    transition: ease-in-out;
+
+.ListItems p{
+  padding: 10px;
+  position: relative;
+  transition: ease-in-out;
+  width: 100%;
+  line-height: 30px;
+  textAlign: 'center';
 }
+
+
+.faicons {
+  color: #eba210;
+  size: 10px;
+}
+
+
+input {
+  width: 80%;
+  background-color: #14b9c9;
+  outline: none;
+  border: none;         
+  border-color: transparent; 
+}
+
