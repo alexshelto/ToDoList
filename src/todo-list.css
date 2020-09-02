@@ -1,12 +1,12 @@
 body {
-  background-color: #A02DB8;
+  background-color: #14b9c9;
 }
 
 
 .ToDoList{
   min-height: 500px;
   width: 400px;
-  background-color: #F0DBD8;
+  background-color: #0c3e70;
   margin: 40px auto;
 }
 
@@ -14,17 +14,18 @@ body {
 #to-do-form input {
   boarder: 0;
   width: 200px;
-  height: 50;
-  padding: 0 20px;
+  height: 100;
+  padding: 20 10px;
+  line-height: 28px;
   margin: 20px;
   border-radius: 10px; 'rounded'
   color: #000;
 }
       
-#todo-form button{
-  height: 50px;
-  width: 80px;
+#to-do-form button{
+  height: 30px;
+  width: 50px;
   border-radius: 5px;
   border: 0;
-  background-color: brown;
+  background-color: #eba210;
 }
